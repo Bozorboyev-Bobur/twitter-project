@@ -1,0 +1,101 @@
+$color_1: inherit;
+$color_2: #0f1419;
+$color_3: #e7e9ea;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  background: transparent;
+  list-style: none;
+  list-style-type: none;
+  color: $color_1;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+li {
+  text-decoration: none;
+  background: transparent;
+  list-style: none;
+  list-style-type: none;
+  color: $color_1;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul {
+  text-decoration: none;
+  background: transparent;
+  list-style: none;
+  list-style-type: none;
+  color: $color_1;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+button {
+  text-decoration: none;
+  background: transparent;
+  list-style: none;
+  list-style-type: none;
+  color: $color_1;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  pointer-events: none;
+}
+
+html {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  height: 100%;
+  font-family: Roboto, sans-serif;
+}
+
+#__next {
+  height: 100%;
+}
+
+.home {
+  font-weight: 700;
+}
+
+@media (prefers-color-scheme:light) {
+  body {
+    color: $color_2;
+    background: #fff;
+  }
+}
+
+@media (prefers-color-scheme:dark) {
+  body {
+    color: $color_3;
+    background: #000;
+  }
+
+  .iconSvg {
+    path {
+      filter: invert(1);
+    }
+  }
+
+  .twitterLogo {
+    path {
+      fill: #e7e9ea;
+    }
+  }
+}

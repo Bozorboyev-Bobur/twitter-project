@@ -1,0 +1,710 @@
+$color_1: #1d9bf0;
+$color_2: #00ba7c;
+$color_3: #f91880;
+$background-color_1: transparent;
+$background-color_2: #1e9cf11a;
+$background-color_3: #00b87a1a;
+$background-color_4: #f91a821a;
+$background-color_5: #AAAAAA;
+$border-color_1: #2f3336;
+$border-color_2: #333639;
+
+.verified {
+    background-image: url('/imgs/User/blueVerifiedIcon.svg');
+    margin-left: 2px;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    background-position: center;
+}
+
+.addingTweetModalBg {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.addingTweetModal {
+    width: 100%;
+    max-width: 612px;
+    max-height: 92%;
+    margin: 0 auto;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%, 0%);
+    overflow-y: auto;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+
+.addingTweetModalActive {
+    z-index: 9990;
+    opacity: 1;
+}
+
+.postContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 15px 15px 12px 15px;
+    cursor: pointer;
+    transition: .2s ease-out;
+
+    &:hover {
+        background: #00000008;
+    }
+}
+
+.postLeft {
+    width: 48px;
+    min-height: 100%;
+    margin-right: 12px;
+}
+
+.logo {
+    max-width: 48px;
+    max-height: 48px;
+    background-color: $background-color_1;
+    transition: .2s ease-out;
+
+    &:hover {
+        filter: brightness(.8);
+    }
+}
+
+.logoImg {
+    max-width: 48px;
+    max-height: 48px;
+    border-radius: 9999px;
+}
+
+.postRight {
+    width: 100%;
+    height: auto;
+}
+
+.postHeader {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postHeaderLeft {
+    width: auto;
+    height: auto;
+}
+
+.postHeaderTop {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.postUserName {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.postUserNick {
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 20px;
+    margin-left: 5px;
+    text-overflow: ellipsis;
+}
+
+.postHeaderDot {
+    margin: 0px 5px 0;
+    cursor: inherit;
+}
+
+.postDate {
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 20px;
+    opacity: .5;
+}
+
+.postHeaderTripleDots {
+    border: none;
+    font-weight: 600;
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    letter-spacing: 1px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding-left: 2px;
+    transition: .2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        background: #1d9bf01a;
+        color: $color_1;
+    }
+}
+
+.postContentTextContainer {
+    margin-top: -6px;
+    margin-bottom: 12px;
+}
+
+.postContentContainer {
+    width: 100%;
+    height: auto;
+    padding-right: 25px;
+}
+
+.postFooter {
+    width: 100%;
+    height: auto;
+    display: flex;
+    max-width: 425px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.postFooterItem {
+    width: auto;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    transition: all .2s ease-out;
+    user-select: none;
+
+    &:nth-child(1) {
+        &:hover {
+            color: $color_1;
+
+            >.postFooterItemImg {
+                svg {
+                    path {
+                        fill: #1d9bf0;
+                        stroke: #1e9cf1;
+                        filter: invert(0);
+                    }
+                }
+
+                background-color: $background-color_2;
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        &:hover {
+            color: $color_2;
+
+            >.postFooterItemImg {
+                svg {
+                    path {
+                        stroke: #00ba7c;
+                        filter: invert(0);
+                    }
+                }
+
+                background-color: $background-color_3;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        &:hover {
+            color: $color_3;
+
+            >.postFooterItemImg {
+                svg {
+                    path {
+                        fill: #f91880;
+                        stroke: #f91a82;
+                        filter: invert(0);
+                    }
+                }
+
+                background-color: $background-color_4;
+            }
+        }
+    }
+
+    svg {
+        width: 1.25rem;
+
+        path {
+            transition: .2s ease-out;
+        }
+    }
+}
+
+.postFooterItemImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .2s ease-out;
+}
+
+.postFooterItemText {
+    padding: 0 5px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.postFooterShareBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 9999px;
+    transition: .2s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &:hover {
+        background: #1e9cf11a;
+
+        >svg {
+            path {
+                fill: #1d9bf0;
+                stroke: #1e9cf1;
+                filter: invert(0);
+            }
+        }
+    }
+}
+
+.postMediasContainer {
+    width: auto;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.postMediasContent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-right: 15px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.postContentHashtagsContainer {
+    width: auto;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.postContentHashtagsText {
+    color: $color_1;
+    margin-right: 8px;
+    line-height: 20px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.postMedias {
+    max-width: 100%;
+    width: 100%;
+    max-height: 679px;
+    display: flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.postContentImgContainer {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.postImgContent {
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.postContentVideoContainer {
+    max-width: 100%;
+    width: 100%;
+    max-height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    background: #000;
+}
+
+.postVideoContent {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.postContentText {
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-size: .938rem;
+    line-height: 20px;
+}
+
+.postAndCommentContainer {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eff3f4;
+    animation-name: postCardAnimation;
+    animation-duration: .25s;
+    animation-timing-function: linear 0s;
+    z-index: 10;
+    background: #fff;
+}
+
+@keyframes postCardAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.postCommentContainer {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    flex-direction: column;
+    max-height: 400px;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    cursor: pointer;
+
+}
+
+.postCommentBox {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+    padding: 15px;
+    transition: .2s ease-out;
+    background: #ffffff08;
+    animation-name: postCardAnimation;
+    animation-duration: .25s;
+    animation-timing-function: linear 0s;
+    background: #fff;
+
+    &:hover {
+        background: #00000008;
+    }
+}
+
+
+@keyframes postCardAnimation {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.postCommentLeft {
+    min-height: 100%;
+    width: 32px;
+    margin-right: 8px;
+}
+
+.postCommentProfileImg {
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 32px;
+    max-height: 32px;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.postCommentLine {
+    position: absolute;
+    height: calc(100% - 48px);
+    width: 1px;
+    top: 50px;
+    left: 30px;
+    border: 1px solid #cfd9de;
+}
+
+.postCommentRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.postCommentHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postCommentHeaderLeft {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.postCommentUserName {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.postCommentNick {
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 20px;
+    margin-left: 5px;
+    text-overflow: ellipsis;
+}
+
+.postCommentDate {
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 20px;
+    opacity: .5;
+}
+
+.postCommentReplying {
+    font-size: 15px;
+    font-weight: 400;
+    word-wrap: break-word;
+    line-height: 20px;
+
+    span {
+        opacity: .5;
+    }
+}
+
+.postCommentReplyingNickName {
+    color: $color_1;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.postCommentTextContainer {
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+.postCommentContent {
+    max-width: 100%;
+    height: auto;
+}
+
+.postCommentText {
+    white-space: pre-wrap;
+    font-size: .938rem;
+    line-height: 20px;
+    word-break: break-all;
+}
+
+.postCommentImgContainer {
+    max-width: 70%;
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+.postCommentImgContent {
+    border-radius: 12px;
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    height: auto;
+}
+
+.addingTweetModalCloseBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background .2s;
+    padding: 8px;
+    outline: none;
+    position: sticky;
+    top: 7px;
+    left: 7px;
+    z-index: 999;
+
+    &:hover {
+        background: #9b9b9b22;
+    }
+
+    &:focus {
+        background: #9b9b9b22;
+    }
+
+    &>svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 617px) {
+    .addingTweetModal {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        max-height: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .addingTweetModalCloseBtn {
+        &:hover {
+            background: rgba(239, 243, 244, .1);
+        }
+
+        &>svg {
+            filter: invert(1);
+        }
+    }
+
+    .postCommentBox {
+        background: #000;
+    }
+
+    .postAndCommentContainer {
+        border-color: $border-color_1;
+        background: #000;
+    }
+
+    .postCommentLine {
+        border-color: $border-color_2;
+    }
+
+    .postContainer {
+        &:hover {
+            background: #ffffff08;
+        }
+    }
+
+    .postContentVideoContainer {
+        border: 1px solid #2f3336;
+    }
+
+    .postCommentBox {
+        background: #00000008;
+
+        &:hover {
+            background: #ffffff08;
+        }
+    }
+
+    .addingTweetModalBg {
+        background: #5b708366;
+    }
+
+    .addingTweetModal {
+        background: #000;
+    }
+
+    .signOutContainer {
+        background: #000;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .postDate {
+        max-width: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .postUserNameText {
+        max-width: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .postUserNickText {
+        max-width: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .postCommentNick {
+        max-width: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .postCommentUserName {
+        max-width: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .postCommentDate {
+        max-width: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}

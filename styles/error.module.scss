@@ -1,0 +1,54 @@
+$color_1: #536471;
+$color_2: #fff;
+$color_3: #d6d9db;
+$border-color_1: #1DA1F2;
+
+.errorPageContainer {
+	display: flex;
+	align-items: flex-start;
+	max-width: 1366px;
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+}
+.errorPageMain {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 24px;
+	margin-top: 100px;
+	text-align: center;
+}
+.errorPageTitle {
+	color: $color_1;
+	margin-bottom: 28px;
+	font-weight: 400;
+	font-size: 15px;
+}
+.errorPageBtn {
+	background: #1d9bf0;
+	padding: 0 16px;
+	min-height: 36px;
+	min-width: 36px;
+	height: 36px;
+	border-radius: 9999px;
+	margin: 0 auto;
+	width: auto;
+	color: $color_2;
+	font-size: 15px;
+	cursor: pointer;
+	transition: .2s ease-out;
+	outline: none;
+	border: none;
+	&:focus {
+		border-color: $border-color_1;
+		background: #1c8cd1;
+	}
+	&:hover {
+		background: #1c8cd1;
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.errorPageTitle {
+		color: $color_3;
+	}
+}

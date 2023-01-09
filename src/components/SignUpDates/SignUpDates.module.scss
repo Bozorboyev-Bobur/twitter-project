@@ -1,0 +1,29 @@
+$color_1: #00000099;
+$color_2: #d6d9db;
+$color_3: #aaa9;
+
+.signUpModalDatesBox {
+	padding-top: 36px;
+}
+.signUpModalDateTitle {
+	font-size: 1.075rem;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.signUpModalDateText {
+	color: $color_1;
+	font-size: .9rem;
+	font-weight: 500;
+	width: 100%;
+	max-width: 612px;
+	line-height: 1.4;
+	margin-bottom: 15px;
+}
+@media (prefers-color-scheme:dark) {
+	.signUpModalDateTitle {
+		color: $color_2;
+	}
+	.signUpModalDateText {
+		color: $color_3;
+	}
+}

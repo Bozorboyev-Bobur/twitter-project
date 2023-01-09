@@ -1,0 +1,479 @@
+$white: #fff;
+$grey: #d6d9db;
+
+/* */
+.addingTweetContent {
+    overflow: hidden;
+    max-width: 507px;
+    max-height: 507px;
+    margin-top: 12px;
+    width: 100%;
+    border-radius: 20px;
+    position: relative;
+}
+
+.addingTweetEmojiForm {
+    display: flex;
+    position: absolute;
+    left: 62px;
+    top: 172px;
+    z-index: 9999;
+    box-shadow: rgb(0 0 0 / 8%) 0px 8px 28px;
+}
+
+.emojiPickerFormBg {
+    visibility: visible;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #000;
+    min-width: 100vw;
+    opacity: 0;
+    min-height: 100vh;
+    z-index: -1;
+}
+
+.emojiPickerFormBgActive {
+    z-index: 9999;
+    opacity: .55;
+}
+
+.addingTweetModalBg {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.addingTweetModal {
+    width: 100%;
+    max-width: 612px;
+    max-height: 92%;
+    margin: 0 auto;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%, 0%);
+    overflow-y: auto;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.addingTweetModalActive {
+    z-index: 9990;
+    opacity: 1;
+}
+
+.addingTweetContainer {
+    padding: 0 16px;
+    margin-top: 12px;
+}
+
+.addingTweetImgContent {
+    max-height: 100%;
+    width: auto;
+    z-index: -1;
+    max-width: 100%;
+    border-radius: 20px;
+    min-width: 100px;
+    min-height: 100px;
+    text-align: center;
+    border: 1px solid #2f3336;
+}
+
+.addingTweetImgContentDeleteBtn {
+    width: 32px;
+    height: 32px;
+    top: 5px;
+    left: 5px;
+    background: #2f3336;
+    padding: 9px;
+    position: absolute;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s ease-out;
+
+    &:hover {
+        filter: invert(.1);
+    }
+
+    &>svg {
+        width: 100%;
+        height: 100%;
+        filter: invert(1);
+    }
+}
+
+.addingTweetContainer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: relative;
+}
+
+.addingTweetLeft {
+    padding-right: 15px;
+    min-height: 100%;
+}
+
+.addingTweetImg {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    border-radius: 9999px;
+}
+
+.addingTweetRight {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.addingTweetTextInputContainer {
+    width: 100%;
+    min-height: 96px;
+    height: auto;
+}
+
+.addingTweetTextInput {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    outline: none;
+    max-width: 100%;
+    overflow: hidden;
+    user-select: text;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    font-family: Roboto, sans-serif;
+    resize: none;
+    min-height: 100%;
+    padding: 11px 0;
+
+    &::placeholder {
+        font-size: 1.25rem;
+    }
+}
+
+.addingTweetFooter {
+    border-top: 1px solid #eff3f4;
+    margin-top: 12px;
+    padding-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addingTweetFooterInputs {
+    display: flex;
+    align-items: center;
+}
+
+.addingTweetFooterRight {
+    display: flex;
+    align-items: center;
+}
+
+.addingTweetFooterItemBox {
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    text-align: center;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    &:first-child {
+        position: relative;
+    }
+
+    &:hover {
+        background: #1d9bf01a;
+    }
+}
+
+.addingTweetFooterItem {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+
+    path {
+        fill: #1d9bf0;
+    }
+}
+
+.addingTweetFooterItemInput {
+    width: 100%;
+    height: 100%;
+    max-width: 32px;
+    max-height: 32px;
+    z-index: 10;
+    position: absolute;
+    opacity: 0;
+    top: 2px;
+    left: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.addingTweetTweetBtn {
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0 16px;
+    background: #1d9bf0;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: $white;
+
+    &:disabled {
+        opacity: .5;
+        cursor: inherit;
+    }
+}
+
+.addingTweetProgressBar {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    transition: .25s ease;
+    margin-right: 15px;
+}
+
+.addingTweetEmojiPicker {
+    position: absolute;
+    width: 10px;
+}
+
+.addingTweetImgUrlBox {
+    width: 100%;
+    height: 40px;
+    padding: 0 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background: #1d9bf0;
+    border-radius: 8px;
+}
+
+.addingTweetImgUrlInput {
+    width: 75%;
+    height: 100%;
+    outline: none;
+    border-radius: 6px;
+    padding: 12px 0 12px 12px;
+    border: none;
+    font-size: 1rem;
+    background: transparent;
+    color: #fff;
+
+    &::placeholder {
+        color: #fff;
+    }
+}
+
+.addingTweetImgUrlButton {
+    width: auto;
+    height: 100%;
+    padding: 0 12px;
+    font-size: .875rem;
+    background: transparent;
+    color: #eff3f4;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    border-left: 1px solid #eff3f4;
+}
+
+.addingTweetModalHeader {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    min-height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: #ffffffd9;
+    z-index: 2;
+    cursor: pointer;
+    margin-top: -32px;
+    justify-content: flex-end;
+}
+
+.addingTweetModalCloseBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background .2s;
+    padding: 8px;
+    outline: none;
+
+    &:hover {
+        background: #9b9b9b22;
+    }
+
+    &:focus {
+        background: #9b9b9b22;
+    }
+
+    &>svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.addingTweetTweetBtnFixed {
+    display: none;
+    min-width: 30px;
+    min-height: 30px;
+    padding: 0 15px;
+    background: #1d9bf0;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 20px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: $white;
+
+    &:disabled {
+        opacity: .5;
+        cursor: inherit;
+    }
+}
+
+@media only screen and (max-width: 617px) {
+    .addingTweetFooterItemBox {
+        &:nth-child(4) {
+            display: none;
+        }
+
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .addingTweetFooterItemInput {
+        max-width: 30px;
+        max-height: 30px;
+        top: 1px;
+        left: 0;
+    }
+
+    .addingTweetTweetBtn {
+        display: none;
+    }
+
+    .addingTweetTweetBtnFixed {
+        display: block;
+    }
+
+    .addingTweetContainer {
+        border-radius: 0;
+    }
+
+    .addingTweetProgressBar {
+        margin-left: 15px;
+    }
+
+    .addingTweetTextInput {
+        line-height: 23px;
+        font-size: 1.1rem;
+        max-height: 96px;
+        overflow-y: auto;
+
+        &::placeholder {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .addingTweetFooter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .addingTweetFooterRight {
+        margin-top: 10px;
+    }
+
+    .addingTweetProgressBar {
+        margin: 0 0 0 5px;
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    .addingTweetModalCloseBtn {
+        &:hover {
+            background: rgba(239, 243, 244, .1);
+        }
+
+        &>svg {
+            filter: invert(1);
+        }
+    }
+
+    .addingTweetModalHeader {
+        background: #000000d9;
+    }
+
+    .addingTweetModalBg {
+        background: #5b708366;
+    }
+
+    .addingTweetModal {
+        background: #000;
+    }
+
+    .addingTweetTextInput {
+        color: $grey;
+    }
+
+    .addingTweetFooter {
+        border-top: 1px solid #2f3336;
+    }
+}

@@ -1,0 +1,687 @@
+$color_1: #fff;
+$color_2: #5B7083;
+$color_3: #71767b;
+$background-color_1: rgb(29, 155, 240, 0.1);
+$border-color_1: #5B7083;
+$border-color_2: #1DA1F2;
+$border-color_3: #fff;
+$border-color_4: #2f3336;
+$outline-color_1: #1DA1F2;
+$outline-color_2: #e4e4e4;
+
+.headerNavIcon {
+    width: 28px;
+    height: 28px;
+}
+
+.headerNavBg {
+    min-width: 317px;
+    min-height: 100%;
+    background: transparent;
+}
+
+.signOutBg {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.addingTweetModalBg {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.signOutContainer {
+    width: 300px;
+    min-width: 260px;
+    max-width: 360px;
+    max-height: 480px;
+    position: fixed;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 16px;
+    left: 10px;
+    bottom: 88px;
+    box-shadow: rgb(101 119 134 / 20%) 0px 0px 15px, rgb(101 119 134 / 15%) 0px 0px 3px 1px;
+}
+
+.addingTweetModal {
+    width: 100%;
+    max-width: 612px;
+    max-height: 92%;
+    margin: 0 auto;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 30px;
+    transform: translate(-50%, 0%);
+    overflow-y: auto;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.signOutBtn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: inherit;
+    font-size: 1.063rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background: rgb(247, 249, 249);
+    }
+}
+
+.signOutModalActive {
+    z-index: 9999;
+    opacity: 1;
+}
+
+.addingTweetModalActive {
+    z-index: 9990;
+    opacity: 1;
+}
+
+.headerNav {
+    min-width: 317px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    min-height: 100%;
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    background: #fff;
+}
+
+.headerNavMenu {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 12px;
+    min-height: 100vh;
+}
+
+.headerNavTitle {
+    width: 52px;
+    height: 52px;
+}
+
+.twitterLogoBox {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.twitterLogoLink {
+    min-height: 52px;
+    min-width: 52px;
+    max-width: 52px;
+    max-height: 52px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    transition: background .2s ease-out;
+    outline-color: $outline-color_1;
+
+    &:focus {
+        background-color: $background-color_1;
+    }
+
+    &:hover {
+        background-color: $background-color_1;
+    }
+}
+
+.twitterLogo {
+    width: 28px;
+    height: 28px;
+
+    svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+.twitterLogoContainer {
+    width: 84%;
+    margin-top: 2px;
+}
+
+.navMenuList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headerNavMenuLink {
+    display: flex;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        >.headerNavMenuItem {
+            background: #e4e4e4;
+        }
+    }
+
+    &:focus {
+        >.headerNavMenuItem {
+            border-color: $border-color_1;
+        }
+    }
+
+    &:nth-child(3) {
+        display: none;
+    }
+}
+
+.headerNavMenuItem {
+    display: flex;
+    align-items: center;
+    border: none;
+    justify-content: flex-start;
+    border-radius: 9999px;
+    padding: 9px;
+    outline-color: $outline-color_2;
+    transition: all .2s ease-out;
+    border: 2px solid transparent;
+}
+
+.headerNavMenuText {
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 24px;
+    margin: 0 16px 0 18px;
+}
+
+.headerNavMenuImg {
+    width: 28px;
+    height: 28px;
+}
+
+.headerNavMain {
+    flex: 1 1 auto;
+    width: 84%;
+    min-height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.headerNavTweetBtn {
+    width: 230px;
+    height: 50px;
+    padding: 12px;
+    text-align: center;
+    background: rgb(29, 155, 240);
+    color: $color_1;
+    border-radius: 9999px;
+    font-size: 1.063rem;
+    border: none;
+    font-weight: 700;
+    margin-top: 8px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    transition: background .2s ease-out;
+    outline: none;
+    box-shadow: rgb(0 0 0 / 8%) 0px 8px 28px;
+
+    &:focus {
+        border-color: $border-color_2;
+        background: #1c8cd1;
+    }
+
+    &:hover {
+        background: #1c8cd1;
+    }
+}
+
+.headerNavTweetImg {
+    display: none;
+}
+
+.accountControl {
+    display: flex;
+    width: 84%;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 9999px;
+    margin-bottom: 12px;
+    border: 2px solid transparent;
+    outline: none;
+    transition: all .2s ease-out;
+
+    &:focus {
+        border: 2px solid #5B7083;
+        background: #e4e4e4;
+    }
+
+    &:hover {
+        background: #e4e4e4;
+    }
+}
+
+.accountControlData {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: auto 0 auto 8px;
+}
+
+.accountControlUserName {
+    font-size: 0.875rem;
+    color: $color_2;
+    font-weight: 300;
+}
+
+.accountControlName {
+    font-size: .950rem;
+    font-weight: 600;
+}
+
+.accountControlImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    object-fit: cover;
+}
+
+.accountControlTripleDots {
+    font-size: 1.4rem;
+    font-weight: 400;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0 0 auto;
+}
+
+.addingTweetModalCloseBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background .2s;
+    padding: 8px;
+    outline: none;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 7px;
+    left: 7px;
+    z-index: 999;
+
+    &:hover {
+        background: #9b9b9b22;
+    }
+
+    &:focus {
+        background: #9b9b9b22;
+    }
+}
+
+@media only screen and (max-width: 1281px) {
+    .headerNavMenuLink {
+        &:nth-child(5) {
+            display: none;
+        }
+
+        &:nth-child(6) {
+            display: none;
+        }
+
+        width: 52px;
+        height: 52px;
+    }
+
+    .headerNavMenuText {
+        display: none;
+    }
+
+    .headerNavTweetBtn {
+        width: 52px;
+        height: 52px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+
+    .headerNavTweetImg {
+        display: block;
+        width: 28px;
+        height: 28px;
+    }
+
+    .headerNavTweetText {
+        display: none;
+    }
+
+    .headerNav {
+        max-width: 13%;
+        min-width: 13%;
+        width: 100%;
+        overflow-y: auto;
+        padding-left: 12px;
+        justify-content: inherit;
+    }
+
+    .headerNavBg {
+        min-width: 13%;
+        height: 100%;
+    }
+
+    .headerNavMain {
+        width: auto;
+    }
+
+    .twitterLogoContainer {
+        width: auto;
+        width: auto;
+        padding: 0 12px;
+    }
+
+    .accountControlData {
+        display: none;
+    }
+
+    .accountControlTripleDots {
+        display: none;
+    }
+
+    .accountControl {
+        width: auto;
+        width: auto;
+        margin: 4px 4px 12px 0px;
+    }
+
+    .navMenuList {
+        padding: 0 12px;
+    }
+
+    .headerNavMenu {
+        position: absolute;
+        padding: 0;
+    }
+
+    .headerNavMenuItem {
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 1087px) {
+    .navMenuList {
+        padding: 0 8px;
+    }
+
+    .twitterLogoContainer {
+        padding: 0 8px;
+    }
+
+    .accountControl {
+        margin-bottom: 12px;
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 1004px) {
+    .headerNavMenuLink {
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            display: flex;
+        }
+    }
+
+    .headerNav {
+        max-width: 18%;
+        min-width: 18%;
+    }
+
+    .headerNavBg {
+        max-width: 18%;
+        min-width: 18%;
+    }
+}
+
+@media only screen and (max-width: 757px) {
+    .headerNav {
+        max-width: 15%;
+        min-width: 15%;
+    }
+
+    .headerNavBg {
+        max-width: 15%;
+        min-width: 15%;
+    }
+}
+
+@media only screen and (max-width: 704px) {
+    .headerNav {
+        max-width: 14%;
+        min-width: 14%;
+    }
+
+    .headerNavBg {
+        max-width: 14%;
+        min-width: 14%;
+    }
+
+    .headerNavMenu {
+        align-items: center;
+    }
+
+    .accountControl {
+        margin-bottom: 12px;
+        padding: 8px;
+    }
+
+    .navMenuList {
+        padding: 0;
+    }
+
+    .twitterLogoContainer {
+        padding: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .addingTweetModalCloseBtn {
+        &:hover {
+            background: rgba(239, 243, 244, .1);
+        }
+
+        &>svg {
+            filter: invert(1);
+        }
+    }
+
+    .addingTweetModalBg {
+        background: #5b708366;
+    }
+
+    .addingTweetModal {
+        background: #000;
+    }
+
+    .signOutContainer {
+        background: #000;
+    }
+
+    .signOutBtn {
+        &:hover {
+            background: rgb(22, 24, 28);
+        }
+    }
+
+    .headerNav {
+        border-color: #2f3336;
+        background: #000;
+    }
+
+    .headerNavMenuLink {
+        &:hover {
+            >.headerNavMenuItem {
+                background: #e7e9ea1a;
+            }
+        }
+
+        &:focus {
+            >.headerNavMenuItem {
+                border-color: $border-color_3;
+            }
+        }
+    }
+
+    .accountControl {
+        &:focus {
+            border: 2px solid #fff;
+            background: #e7e9ea1a;
+        }
+
+        &:hover {
+            background: #e7e9ea1a;
+        }
+    }
+
+    .accountControlUserName {
+        color: $color_3;
+    }
+
+    .headerNav {
+        border-color: $border-color_4;
+    }
+}
+
+@media only screen and (max-width: 617px) {
+    .addingTweetModal {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        max-height: 100%;
+        border-radius: 0;
+    }
+
+    .headerNav {
+        max-width: 75px;
+        min-width: 75px;
+    }
+
+    .headerNavBg {
+        max-width: 75px;
+        min-width: 75px;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .signOutModalActive {
+        display: none;
+    }
+
+    .headerNav {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+        height: 52px;
+        padding: 0;
+        flex-direction: inherit;
+        bottom: 0;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .twitterLogoContainer {
+        display: none;
+    }
+
+    .accountControl {
+        display: none;
+    }
+
+    .headerNavBg {
+        display: none;
+    }
+
+    .headerNavMain {
+        flex: auto;
+        height: 53px;
+        margin: 0;
+        min-height: 53px;
+        max-height: 53px;
+        width: 100%;
+    }
+
+    .navMenuList {
+        flex-direction: inherit;
+        width: 100%;
+    }
+
+    .headerNavMenuLink {
+        &:nth-child(7) {
+            display: none;
+        }
+
+        &:nth-child(8) {
+            display: none;
+        }
+
+        width: 33.33%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerNavTweetBtn {
+        position: fixed;
+        right: 30px;
+        bottom: 70px
+    }
+
+    .headerNavMenuItem {
+        padding: 0;
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,88 @@
+.feedContent {
+    width: 100%;
+    border-right: 1px solid #eff3f4;
+    border-left: 1px solid #eff3f4;
+    min-height: 100%;
+    background: transparent;
+    max-width: 598px;
+    padding-bottom: 100px;
+}
+
+.feedPosts {
+    z-index: 0;
+}
+
+.feedHeader {
+    background: transparent;
+    border-bottom: 1px solid #eff3f4;
+    padding: 15px;
+}
+
+.feedTitle {
+    font-size: 1.25rem;
+    padding: 12px 0;
+}
+
+.feedFixedHeader {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: #ffffffd9;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.feedTopTweetsBtn {
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        background: #0f14191a;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .feedTopTweetsBtn {
+        &:hover {
+            background: #e6e9ea1a;
+        }
+    }
+
+    .feedContent {
+        border-right: 1px solid #2f3336;
+        border-left: 1px solid #2f3336;
+    }
+
+    .feedFixedHeader {
+        background: #000000d9;
+    }
+
+    .feedHeader {
+        border-bottom: 1px solid #2f3336;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .feedHeader {
+        display: none;
+    }
+
+    .feedContent {
+        border: none;
+    }
+}

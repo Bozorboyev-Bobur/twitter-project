@@ -1,0 +1,144 @@
+$color_1: #0f1419;
+$color_2: #5B7083;
+$color_3: #fff;
+$color_4: #1d9bf0;
+$color_5: rgb(83, 100, 113);
+$color_6: #e7e9ea;
+$color_7: #71767b;
+
+.whoToFollowBg {
+    min-width: 350px;
+    min-height: 100%;
+    background: transparent;
+    margin: 0 48px 0 36px;
+}
+
+.explorePageContainer {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.exploreContent {
+    width: 100%;
+    border-right: 1px solid #eff3f4;
+    border-left: 1px solid #eff3f4;
+    min-height: 110%;
+    background: transparent;
+    max-width: 598px;
+    padding-bottom: 100px;
+}
+
+.exploreHeader {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    background: #ffffffd9;
+    z-index: 998;
+    cursor: pointer;
+}
+
+.exploreTrendsCardsContainer {
+    border-bottom: 1px solid #eff3f4;
+}
+
+.trendsForYouShowMoreLink {
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .2s ease-out;
+    outline: none;
+
+    &:hover {
+        background: #00000008;
+    }
+
+    &:focus-visible {
+        box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+        background: #00000008;
+    }
+}
+
+.trendsForYouShowMoreText {
+    line-height: 20px;
+    font-size: 0.875rem;
+    color: $color_4;
+}
+
+.whoToFollowContainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 100%;
+}
+
+.whoToFollowContent {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 48px 0 36px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    .exploreContent {
+        border-right: 1px solid #2f3336;
+        border-left: 1px solid #2f3336;
+    }
+
+    .exploreTrendsCardsContainer {
+        border-bottom: 1px solid #2f3336;
+    }
+
+    .exploreHeader {
+        background: #000000d9;
+    }
+
+    .trendsForYouShowMoreLink {
+        &:hover {
+            background: #ffffff08;
+        }
+
+        &:focus-visible {
+            box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+            background: #ffffff08;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1004px) {
+    .whoToFollowBg {
+        max-width: 290px;
+        margin: 0 0 36px 0;
+    }
+}
+
+@media only screen and (max-width: 1004px) {
+    .whoToFollowContainer {
+        display: none;
+    }
+
+    .whoToFollowContent {
+        display: none;
+    }
+
+    .whoToFollowBg {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 499px) {}

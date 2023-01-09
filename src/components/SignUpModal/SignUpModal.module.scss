@@ -1,0 +1,460 @@
+$color_1: #00000099;
+$color_2: #1E97E1;
+$color_3: #286e99;
+$color_4: #fff;
+$color_5: #d6d9db;
+$color_6: #e7e9ea;
+$background-color_1: #AAAAAA;
+$background-color_2: #e0e0e0;
+$background-color_3: #000;
+$background-color_4: #5b708366;
+$border-color_1: #333639;
+$border-color_2: transparent;
+$outline-color_1: #1E97E1;
+
+.nameGreenCheckMark {
+    background-image: url('/imgs/SignUpModal/GreenCheckMark.svg');
+    width: 18px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // position: absolute;
+    position: absolute;
+    top: 25px;
+    right: 15px;
+}
+
+.dataGreenCheckMark {
+    background-image: url('/imgs/SignUpModal/GreenCheckMark.svg');
+    width: 18px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // position: absolute;
+    position: absolute;
+    top: 110px;
+    right: 15px;
+}
+
+.dateGreenCheckMark {
+    background-image: url('/imgs/SignUpModal/GreenCheckMark.svg');
+    width: 18px;
+    height: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // position: absolute;
+    position: absolute;
+    top: 195px;
+    right: 15px;
+}
+
+.signUpModalContainer {
+    width: 100%;
+    max-width: 612px;
+    max-height: 100vh;
+    height: 95%;
+    padding: 36px;
+    margin: 0 auto;
+    background: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+    z-index: -1;
+    opacity: 0;
+    border-radius: 10px;
+    padding: 36px 80px 36px 80px;
+    display: flex;
+    flex-direction: column;
+
+    &::-webkit-scrollbar {
+        width: 14px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 4px solid rgba(0, 0, 0, 0);
+        background-clip: padding-box;
+        border-radius: 9999px;
+        margin: 10px;
+        background-color: $background-color_1;
+    }
+}
+
+.loginPageCloseImg {
+    width: 100%;
+    height: 100%;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.signUpModalActive {
+    z-index: 1000;
+    opacity: 1;
+}
+
+.signUpModalStep {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.signUpModalHeader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.signUpModalCloseBtn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 9999px;
+    transition: background .2s;
+    padding: 5px;
+
+    &:hover {
+        background: #9b9b9b22;
+    }
+
+    &:focus {
+        background: #9b9b9b22;
+    }
+}
+
+.signUpModalCloseImg {
+    width: 100%;
+    height: 100%;
+}
+
+.signUpModalTitle {
+    font-size: 1.9rem;
+    margin: 35px 0;
+}
+
+.signUpModalInputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.signUpModalInputs>input {
+    width: 100%;
+    max-width: 612px;
+    border: 2px solid #00000033;
+    margin-bottom: 25px;
+    height: 60px;
+    border-radius: 6px;
+    transition: border .1s;
+    padding: 30px 15px 15px;
+    font-size: 1.125rem;
+    outline: none;
+    position: relative;
+    padding-right: 40px;
+
+    &::placeholder {
+        color: $color_1;
+    }
+
+    &:focus-visible {
+        border-color: #1E97E1;
+    }
+}
+
+.signUpModalNameInput {
+    position: relative;
+
+    &+label {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        transform: translate(15px, 20px);
+        font-size: 1.125rem;
+        transition: .2s ease-out;
+    }
+}
+
+.signUpModalNameInput:focus-within+label,
+.signUpModalNameInput:valid+label {
+    transform: translate(10px, 5px) scale(.7);
+    border: none;
+    opacity: .5;
+}
+
+.signUpModalNameInput:focus-within+label {
+    color: #1c8cd1;
+    opacity: 1;
+}
+
+.signUpModalDateInput {
+    position: relative;
+
+    &+label {
+        position: absolute;
+        top: 170px;
+        left: -5px;
+        transform: translate(15px, 20px);
+        font-size: 1.125rem;
+        transition: .2s ease-out;
+    }
+}
+
+.signUpModalDateInput:focus-within+label,
+.signUpModalDateInput:valid+label {
+    transform: translate(10px, 5px) scale(.7);
+    border: none;
+    opacity: .5;
+}
+
+.signUpModalDateInput:focus-within+label {
+    color: #1c8cd1;
+    opacity: 1;
+}
+
+.signUpModalDataInput {
+    position: relative;
+
+    &+label {
+        position: absolute;
+        top: 85px;
+        left: 0px;
+        transform: translate(15px, 20px);
+        font-size: 1.125rem;
+        transition: .2s ease-out;
+    }
+}
+
+.signUpModalDataInput:focus-within+label,
+.signUpModalDataInput:valid+label {
+    transform: translate(10px, 5px) scale(.7);
+    border: none;
+    opacity: .5;
+}
+
+.signUpModalDataInput:focus-within+label {
+    color: #1c8cd1;
+    opacity: 1;
+}
+
+.signUpModalEmailTogglerBtn {
+    border: none;
+    color: $color_2;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    word-spacing: 1px;
+
+    &:focus {
+        color: $color_3;
+    }
+
+    &:hover {
+        color: $color_3;
+    }
+}
+
+.signUpModalNextBtn {
+    width: 100%;
+    max-width: 612px;
+    min-height: 55px;
+    border-radius: 9999px;
+    background: #1DA1F2;
+    color: $color_4;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background .2s ease-out;
+    outline: none;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+
+    &:focus {
+        background: #1c8cd1;
+    }
+
+    &:hover {
+        background: #1c8cd1;
+    }
+
+    &:active {
+        background: #196ca0;
+    }
+
+    &:disabled {
+        background-color: $background-color_2;
+        cursor: inherit;
+        color: $color_1;
+    }
+}
+
+.signUpModalBg {
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    opacity: 0.55;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    z-index: 999;
+    z-index: -1;
+    opacity: 0;
+}
+
+.signUpModalSecondTitle {
+    font-size: 1.25rem;
+    line-height: 20px;
+}
+
+.signUpModalAgreementContainer {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 12px;
+
+    input {
+        margin-top: 4px;
+    }
+}
+
+.signUpModalAgreementText {
+    font-size: 0.938rem;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.signUpModalTerms {
+    margin-top: 40px;
+    color: #536471;
+    font-size: 0.938rem;
+
+    a {
+        color: #1E97E1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.signUpModalDetailTerms {
+    font-size: 0.813rem;
+    color: #536471;
+    line-height: 16px;
+
+    a {
+        color: #1E97E1;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.signupModalNameInputCounter {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: none;
+    font-size: .875rem;
+}
+
+@media only screen and (max-width: 614px) {
+    .signUpModalContainer {
+        max-height: 100vh;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        padding: 36px;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .signUpModalTitle {
+        font-size: 1.7rem;
+    }
+
+    .signUpModalSecondTitle {
+        font-size: 1rem;
+    }
+
+    .signUpModalTerms {
+        font-size: .75rem;
+    }
+
+    .signUpModalStep {
+        font-size: 1.1rem;
+    }
+
+    .signUpModalNextBtn {
+        min-height: 42px;
+    }
+
+    .signUpModalInputs>input {
+        font-size: 1rem;
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    .signUpModalNextBtn {
+        border: .5px solid #E4EAED;
+        background: #fff;
+        color: #000;
+        transition: .2s ease-out;
+
+        &:focus {
+            background: #f1f1f1;
+        }
+
+        &:hover {
+            background: #f1f1f1;
+        }
+
+        &:active {
+            background: #d3d3d3;
+        }
+
+        &:disabled {
+            opacity: .5;
+        }
+    }
+
+    .signUpModalTerms {
+        color: #71767b;
+    }
+
+    .signUpModalDetailTerms {
+        color: #71767b;
+    }
+
+    .signUpModalContainer {
+        background-color: $background-color_3;
+        color: $color_5;
+    }
+
+    .signUpModalInputs>input {
+        background: transparent;
+        border-color: $border-color_1;
+        color: $color_6;
+
+        &::placeholder {
+            color: $color_6;
+        }
+    }
+
+    .signUpModalBg {
+        background-color: $background-color_4;
+    }
+}

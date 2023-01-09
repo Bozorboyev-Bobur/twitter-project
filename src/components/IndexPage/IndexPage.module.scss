@@ -1,0 +1,188 @@
+$color_1: #1E97E1;
+$color_2: #286e99;
+$color_3: #000;
+
+.indexPageDiv {
+	width: 100%;
+	height: 120vh;
+	display: flex;
+}
+.indexLeft {
+	width: 55%;
+	height: auto;
+}
+.indexLeftBg {
+	width: 100%;
+	height: 100%;
+}
+.indexLeftImgs {
+	position: relative;
+	height: 100%;
+	background-image: url('https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.indexLeftTwitterLogo {
+	width: 40%;
+	height: 40%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	user-select: none;
+}
+.indexRight {
+	width: 45%;
+	padding: 36px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.indexRightContainer {
+	width: 75%;
+}
+.indexRightTwitterLogo {
+	width: 45px;
+	height: 57px;
+	svg {
+		width: 45px;
+		height: 57px;
+	}
+}
+.indexRightH1 {
+	font-size: 3.5rem;
+	margin: 45px 0;
+	font-weight: 900;
+}
+.indexRightH2 {
+	font-size: 2rem;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+.indexRightSignUpBtn {
+	max-width: 320px;
+	width: 100%;
+	height: 45px;
+	border: .5px solid #E4EAED;
+	border-radius: 9999px;
+	margin-bottom: 10px;
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 5px;
+	cursor: pointer;
+	transition: background .2s ease-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	outline: none;
+	&:focus {
+		background: #f1f1f1;
+	}
+	&:hover {
+		background: #f1f1f1;
+	}
+	&:active {
+		background: #d3d3d3;
+	}
+}
+.indexRightSignUpImg {
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+	margin-top: -4px;
+}
+.agreements {
+	font-size: .875rem;
+	font-weight: 500;
+	margin: 10px 0 20px 0;
+	word-spacing: 1px;
+	max-width: 320px;
+	width: 100%;
+	a {
+		color: $color_1;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.indexRightLogInBox {
+	font-size: 1rem;
+	font-weight: 500;
+	margin: 10px 0 15px 0;
+	word-spacing: 1px;
+}
+.indexRightLogInBtn {
+	border: none;
+	color: $color_1;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 500;
+	word-spacing: 1px;
+	margin-left: 8px;
+	&:focus {
+		color: $color_2;
+	}
+	&:hover {
+		color: $color_2;
+	}
+}
+.indexFooter {
+	width: 100%;
+	display: flex;
+	flex: 1 0 auto;
+	padding: 20px 30px;
+}
+.indexFooterLinks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+}
+.indexFooterlinksItem {
+	padding-right: 16px;
+	margin: 2px;
+	font-size: .825rem;
+	&:not(:last-child) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.indexPageDiv {
+		height: auto;
+		flex-direction: column-reverse;
+	}
+	.indexLeft {
+		height: 50vh;
+		width: 100%;
+	}
+	.indexRight {
+		width: auto;
+	}
+	.indexRightContainer {
+		margin: 0 auto;
+		width: auto;
+	}
+	.indexRightH1 {
+		font-size: 2.5rem;
+	}
+	.indexRightH2 {
+		font-size: 1.5rem;
+	}
+	.indexRightSignUpBtn {
+		font-size: .875rem;
+	}
+	.indexLeftTwitterLogo {
+		width: 60%;
+		height: 60%;
+	}
+}
+@media (prefers-color-scheme:dark) {
+	.indexRightSignUpBtn {
+		background: #fff;
+		color: $color_3;
+	}
+}
